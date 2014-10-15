@@ -75,24 +75,57 @@
 
         </core-toolbar>
 
+        <div id="snappy-head">
+            <h1>Stuff</h1>
+        </div>
+
+        <div id="coder" style="display:none">
+            <h1>Coder</h1>
+        </div>
+
+        <div id="contacter" style="display:none">
+            <h1>Contacter</h1>
+        </div>
+
+        <div id="abouter" style="display:none">
+            <h1>About</h1>
+        </div>
 
     </core-header-panel>
+
+
 
 </head>
 
 <body>
-    <div id="snappy-head">
-        <h1>Stuff</h1>
-    </div>
+
 
     <script>
     var tabs = document.querySelector('paper-tabs');
     var list = document.querySelector('post-list');
+    var last = document.getElementById("snappy-head");
 
     tabs.addEventListener('core-select', function() {
+        if (last != null) {
+            last.style.display = 'none';
+        }
+
         // list.show = tabs.selected;
-        if (tabs.selected == "snappy") document.getElementById("snappy-head").style.display = 'block';
-        else document.getElementById("snappy-head").style.display = 'none';
+        if (tabs.selected == "snappy") {
+            last = document.getElementById("snappy-head")
+        }
+        if (tabs.selected == "code") {
+            last = document.getElementById("coder")
+        }
+        if (tabs.selected == "about") {
+            last = document.getElementById("abouter")
+        }
+        if (tabs.selected == "contact") {
+            last = document.getElementById("contacter")
+        }
+
+        last.style.display = 'block';
+
         console.log("Selected: " + tabs.selected)
     });
     </script>
