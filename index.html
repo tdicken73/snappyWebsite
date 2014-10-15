@@ -14,6 +14,7 @@
     <link rel="import" href="../components/core-header-panel/core-header-panel.html">
     <link rel="import" href="../components/core-toolbar/core-toolbar.html">
     <link rel="import" href="../components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="../components/polymer-ui-card/polymer-ui-card.html">
     <!-- <link rel="import" href="post-list.html"> -->
 
     <style>
@@ -27,7 +28,7 @@
     body {
         height: 100%;
         margin: 0;
-        background-color: #FFFFFF;
+        background-color: #E5E5E5;
         font-family: 'RobotoDraft', sans-serif;
     }
     core-header-panel {
@@ -38,6 +39,15 @@
     core-toolbar {
         background: #03a9f4;
         color: white;
+    }
+    polymer-ui-card {
+        display: block;
+        position: relative;
+        background-color: white;
+        padding: 20px;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
     }
     #tabs {
         width: 100%;
@@ -75,21 +85,23 @@
 
         </core-toolbar>
 
-        <div id="snappy-head">
-            <h1>Stuff</h1>
-        </div>
+        <polymer-ui-card vertical layout center>
+            <div id="snappy-head">
+                <h1>Stuff</h1>
+            </div>
 
-        <div id="coder" style="display:none">
-            <h1>Coder</h1>
-        </div>
+            <div id="coder" style="display:none">
+                <h1>Code</h1>
+            </div>
 
-        <div id="contacter" style="display:none">
-            <h1>Contacter</h1>
-        </div>
+            <div id="contacter" style="display:none">
+                <h1>Contact</h1>
+            </div>
 
-        <div id="abouter" style="display:none">
-            <h1>About</h1>
-        </div>
+            <div id="abouter" style="display:none">
+                <h1>About</h1>
+            </div>
+        </polymer-ui-card>
 
     </core-header-panel>
 
@@ -98,8 +110,6 @@
 </head>
 
 <body>
-
-
     <script>
     var tabs = document.querySelector('paper-tabs');
     var list = document.querySelector('post-list');
