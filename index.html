@@ -76,7 +76,7 @@
 
         <core-toolbar>
 
-            <paper-tabs id="tabs" selected="snappy" self-end>
+            <paper-tabs id="tabs" selected="about" self-end>
                 <paper-tab name="about">About</paper-tab>
                 <paper-tab name="code">Code</paper-tab>
                 <paper-tab name="actor">Actors</paper-tab>
@@ -202,7 +202,7 @@ When using actors, it becomes far easier to create concurrent and distributed ap
     <script>
     var tabs = document.querySelector('paper-tabs');
     var list = document.querySelector('post-list');
-    var last = document.getElementById("snappy-head");
+    var last = document.getElementById("abouter");
 
     tabs.addEventListener('core-select', function() {
         if (last != null) {
