@@ -81,6 +81,7 @@
                 <paper-tab name="code">Code</paper-tab>
                 <paper-tab name="about">About</paper-tab>
                 <paper-tab name="contact">Contact</paper-tab>
+                <paper-tab name="493">493</paper-tab>
             </paper-tabs>
 
         </core-toolbar>
@@ -108,6 +109,9 @@
     Snappy Database will be a NoSQL database that makes use of several technologies and techniques in order to become very high performance.  It will be built upon an existing database, Lightning Memory-Mapped Database by Symas.  The Lightning Memory-Mapped Database is a compact, key-value store database that has very high-performance because it is a purely in-memory database.  In order to implement concurrency via actors, we will use the high-level functioning programming language, Scala, to develop the database.  Scala has an Akka actor system in its standard library, and runs on the Java Virtual Machine, allowing consistency across platforms.  Gossiping protocols for consistency of data purposes are also developed with the actor system. This allows for synchronous and asynchronous calls to the database.For REST/HTTP-based integration layers on top of Scala, we will use Spray.io, a modular, actor-based, open-source toolkit.  Amazon Web Services such as their Simple Storage Service and Elastic Compute Cloud will be used for storage as well as testing our distributed system.  This will give our system the high security and reliability that Amazon provides.
     Snappy Database aims to be a competitive database in the market by being high performance user friendly.  By achieving these goals, Snappy Database will prove to be useful for any company. </h3>
 
+            </div>
+             <div id="493" style="display:none">
+                <h1>493</h1>
             </div>
         </polymer-ui-card>
 
@@ -140,6 +144,9 @@
         }
         if (tabs.selected == "contact") {
             last = document.getElementById("contacter")
+        }
+        if (tabs.selected == "493") {
+            last = document.getElementById("493")
         }
 
         last.style.display = 'block';
